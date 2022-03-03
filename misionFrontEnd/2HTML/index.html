@@ -2,99 +2,266 @@
 <html>
   <head>
     <title>Pasteleria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   
   <body>
-    <style>
-      *{
-        font-family: Georgia, serif;
-      }
-
-      body{
-        background-color: #ffffff;
-      }
-      table{
-        border: 5px solid #FAF1E8;
-      }
-
-      th{
-        font-weight: 900;
-        font-size:25px;
-        color: #8e0f52;
-        min-width: 250px;
-        text-align: left;
-      }
-      td{
-        min-width: 250px;
-        text-align: left;
-      }
-      .pasteleria-info-title{
-        text-align: center;
-        min-width: 100vw;
-        min-height: 50px;
-        border-bottom: 5px #FAF1E8 dashed;
-      }
-      .pasteleria-info-title h1{
-        color:#FAF1E8;
-        font-size: 30px;
-        text-shadow: -3px 0 #8e0f52, 0 2px #8e0f52, -2px 0 #8e0f52, 0 2px #8e0f52;
-      }
-
-      .adornos{
-        margin-top: 10px;
-      }
-    </style>
-    <div class="pasteleria-info">
-      <div class="pasteleria-info-title">
-        <h1>Pasteleria Sueño Pastelero</h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="/images/logo.png">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-      <p>Tenemos los mejores sabores de pasteles!</p>
-    </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#menu-section">
+            Menu
+          </a>
+    
+          <a class="navbar-item" href="#formulario-section">
+            Haz tu pedido
+          </a>
 
-    <div>
-      <table class="prices">
-        <tr>
-          <th>Pasteles</th>
-          <th>Precio</th>
-        </tr>
+          <a class="navbar-item" href="#about-section">
+            Acerca
+          </a>
+          
+        </div>
+      </div>
+    </nav>
+    <main class="container box">
+      <section id="menu-section">
+        <div>
+          <div class="menu">
+            <div class="pasteleria-info">
+              <div class="pasteleria-info-title">
+                <h1 class="title">Pasteleria Sueño Pastelero</h1>
+              </div>
+              <h3 class="subtitle">Tenemos los mejores sabores de pasteles!</h3>
+            </div>
+      
+            <div class="columns">
+              <div class="menu menu-table column">
+                <table class="prices table">
+                  <tr>
+                    <th>Pasteles</th>
+                    <th>Precio</th>
+                  </tr>
+        
+                  <tr>
+                    <td>Pastel de fresas</td>
+                    <td>$175 pesos</td>
+                  </tr>
+                  <tr>
+                    <td>Pastel de moras</td>
+                    <td>$159 pesos</td>
+                  </tr>
+                  <tr>
+                    <td>Pastel de tres leches</td>
+                    <td>$139 pesos</td>
+                  </tr>
+                  <tr>
+                    <td>Pastel de chispas de chocolates</td>
+                    <td>$219 pesos</td>
+                  </tr>
+                </table>
+              </div>
+        
+              <div class="menu menu-table column">
+                <table class="adornos table">
+                  <tr>
+                    <th>Adornos</th>
+                    <th>Precio</th>
+                  </tr>
+        
+                  <tr>
+                    <td>Fresas</td>
+                    <td>$30 pesos / taza</td>
+                  </tr>
+                  <tr>
+                    <td>Moras</td>
+                    <td>$20 pesos / taza</td>
+                  </tr>
+                  <tr>
+                    <td>Chispas de chocolares</td>
+                    <td>$79 pesos</td>
+                  </tr>
+                  <tr>
+                    <td>Mango</td>
+                    <td>$79 pesos</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            
 
-        <tr>
-          <td>Pastel de fresas</td>
-          <td>$115 pesos</td>
-        </tr>
-        <tr>
-          <td>Pastel de moras</td>
-          <td>$119 pesos</td>
-        </tr>
-        <tr>
-          <td>Pastel de tres leches</td>
-          <td>$139 pesos</td>
-        </tr>
-      </table>
-    </div>
 
-    <div>
-      <table class="adornos">
-        <tr>
-          <th>Adornos</th>
-          <th>Precio</th>
-        </tr>
+            <div class="columns">
+              <div class="card column">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="/images/ps-ilusion-1.jpg" alt="pastel ilusion">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Pastel Ilusión</p>
+                      <p class="subtitle is-6">Pastel de fresas</p>
+                    </div>
+                  </div>
 
-        <tr>
-          <td>Fresas</td>
-          <td>$30 pesos / taza</td>
-        </tr>
-        <tr>
-          <td>Moras</td>
-          <td>$20 pesos / taza</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>$139 pesos</td>
-        </tr>
-      </table>
-    </div>
+                  <div class="content">
+                    Pastel de pay y galleta decorado con crema y fresas
+                    <a href="#">#fresas</a> <a href="#">#crema</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card column">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="/images/ps-paraiso-1.jpg" alt="pastel paraiso">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Pastel Paraiso</p>
+                      <p class="subtitle is-6">Pastel con nueces y mango</p>
+                    </div>
+                  </div>
 
+                  <div class="content">
+                    Pastel de crema decorado con mango y nueces.
+                    <a href="#">#mango</a> <a href="#">#nueces</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card column">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="/images/ps-tres-leches-flan-3.jpg" alt="pastel tres leches flan">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Flan de tres leches</p>
+                      <p class="subtitle is-6">Pastel de tres leches con flan</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    Pastel de tres leches decorado con crema de nueces y flan.
+                    <a href="#">#tresleches</a> <a href="#">#flan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="formulario-section">
+        <form class="box">
+          <div class="field has-text-centered">
+              <img src="images/logo.png" width="167">
+          </div>
+
+          <div class="columns">
+            <div class="field column">
+                <label class="label">Correo electrónico</label>
+                <div class="control has-icons-left">
+                    <input type="email" class="input" placeholder="e.g. pasteleriaartesanal@mail.com">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label">Nombre(s)</label>
+                <div class="control has-icons-left">
+                    <input type="email" class="input" placeholder="e.g. pasteleria artesanal">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="field column">
+                <label class="label">Apellido(s)</label>
+                <div class="control has-icons-left">
+                    <input type="email" class="input" placeholder="e.g. Chocolate y caramelo">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="field column columns">
+              <div class="column">
+                Adornos
+                <div class="field control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Chispas de chocolate
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Fresas
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Fresas
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="column">
+                Sabores
+                <div class="field">
+                  <label class="radio">
+                    <input type="radio">
+                    Chocolate
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="radio">
+                    <input type="radio">
+                    Fresa
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="radio">
+                    <input type="radio">
+                    Tres leches
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+              <button class="button is-success">
+                  Terminar pedido
+              </button>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 
 </html>

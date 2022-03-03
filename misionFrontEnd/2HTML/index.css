@@ -1,0 +1,61 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: Georgia, serif;
+}
+
+body{
+  background-color: #ffc4f3;
+  min-height: 100vh;
+  padding-top: 8vh;
+  padding-bottom: 4vh;
+}
+
+/* table{
+  border: 5px solid #ffb3f0;
+} */
+
+th{
+  font-weight: 900;
+  font-size:25px;
+  color: #8e0f52;
+  min-width: 250px;
+  text-align: left;
+}
+td{
+  min-width: 250px;
+  text-align: left;
+}
+
+.pasteleria-info-title{
+  text-align: center;
+  min-width: 100%;
+  min-height: 50px;
+  border-bottom: 5px #ffb3f0 dashed;
+}
+.pasteleria-info-title h1{
+  color:#333333;
+  font-size: 30px;
+  /* text-shadow: -3px 0 #8e0f52, 0 2px #8e0f52, -2px 0 #8e0f52, 0 2px #8e0f52; */
+}
+/* .menu .menu-table{
+  margin-top: 10px;
+  margin-bottom: 20px;
+} */
+
+.container{
+  min-height: 96vh;
+}
+
+.columns .column{
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%
+}
