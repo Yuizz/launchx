@@ -6,11 +6,15 @@ html{
   font-family: Georgia, serif;
 }
 
+a{
+  color: #ff3dc8;
+}
+
 body{
   background-color: #ffc4f3;
   min-height: 100vh;
   padding-top: 8vh;
-  padding-bottom: 4vh;
+  /* padding-bottom: 4vh; */
 }
 
 /* table{
