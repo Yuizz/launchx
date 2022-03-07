@@ -30,7 +30,7 @@
             Haz tu pedido
           </a>
 
-          <a class="navbar-item" href="#about-section">
+          <a class="navbar-item" href="#">
             Acerca
           </a>
           
@@ -45,32 +45,34 @@
               <div class="pasteleria-info-title">
                 <h1 class="title">Pasteleria Sueño Pastelero</h1>
               </div>
-              <h3 class="subtitle">Tenemos los mejores sabores de pasteles!</h3>
+              <div class="block" style="margin-top:10px">
+                <h3 class="subtitle is-4">Tenemos los mejores sabores de pasteles!</h3>
+              </div>
             </div>
       
             <div class="columns">
               <div class="menu menu-table column">
                 <table class="prices table">
                   <tr>
-                    <th>Pasteles</th>
+                    <th>Sabores</th>
                     <th>Precio</th>
                   </tr>
         
                   <tr>
-                    <td>Pastel de fresas</td>
-                    <td>$175 pesos</td>
+                    <td>Pastel de fresa</td>
+                    <td>$125 pesos</td>
                   </tr>
                   <tr>
-                    <td>Pastel de moras</td>
-                    <td>$159 pesos</td>
+                    <td>Pastel de mora</td>
+                    <td>$129 pesos</td>
                   </tr>
                   <tr>
                     <td>Pastel de tres leches</td>
                     <td>$139 pesos</td>
                   </tr>
                   <tr>
-                    <td>Pastel de chispas de chocolates</td>
-                    <td>$219 pesos</td>
+                    <td>Pastel de chocolate</td>
+                    <td>$119 pesos</td>
                   </tr>
                 </table>
               </div>
@@ -175,17 +177,9 @@
           <div class="field has-text-centered">
               <img src="images/logo.png" width="167">
           </div>
-
+          <h2 class="subtitle is-4">Arma tu pedido a tu gusto!</h2>
+          <p>Arma el pastel que quieras y déjanos tus datos nosotros haremos el resto.</p>
           <div class="columns">
-            <div class="field column">
-                <label class="label">Correo electrónico</label>
-                <div class="control has-icons-left">
-                    <input type="email" class="input" placeholder="e.g. pasteleriaartesanal@mail.com">
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                    </span>
-                </div>
-            </div>
             <div class="field column">
                 <label class="label">Nombre(s)</label>
                 <div class="control has-icons-left">
@@ -195,58 +189,94 @@
                     </span>
                 </div>
             </div>
+            <div class="field column">
+                <label class="label">Correo electrónico</label>
+                <div class="control has-icons-left">
+                    <input type="email" class="input" placeholder="e.g. pasteleriaartesanal@mail.com">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
           </div>
           <div class="columns">
             <div class="field column">
-                <label class="label">Apellido(s)</label>
+                <label class="label">Apellidos(s)</label>
                 <div class="control has-icons-left">
-                    <input type="email" class="input" placeholder="e.g. Chocolate y caramelo">
+                    <input type="email" class="input" placeholder="e.g. pasteleria artesanal">
                     <span class="icon is-small is-left">
                         <i class="fa fa-user"></i>
                     </span>
                 </div>
             </div>
+            <div class="field column">
+                <label class="label">Teléfono</label>
+                <div class="control has-icons-left">
+                    <input type="text" class="input" placeholder="e.g. pasteleriaartesanal@mail.com">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="field column">
+                <label class="label">Descripción del pedido</label>
+                <textarea class="textarea" placeholder="Descripción de la decoración de tu pastel" rows="4"></textarea>
+            </div>
             <div class="field column columns">
               <div class="column">
-                Adornos
+                <strong>Adornos</strong>
                 <div class="field control">
                   <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" name="adornos">
                     Chispas de chocolate
                   </label>
                 </div>
                 <div class="field">
                   <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" name="adornos">
                     Fresas
                   </label>
                 </div>
                 <div class="field">
                   <label class="checkbox">
-                    <input type="checkbox">
-                    Fresas
+                    <input type="checkbox" name="adornos">
+                    Moras
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox" name="adornos">
+                    Mango
                   </label>
                 </div>
               </div>
 
 
-              <div class="column">
-                Sabores
+              <div class="column" style="display: flex; flex-direction: column;">
+                <strong>Sabores</strong>
                 <div class="field">
                   <label class="radio">
-                    <input type="radio">
+                    <input type="radio" name="sabor">
                     Chocolate
                   </label>
                 </div>
                 <div class="field">
                   <label class="radio">
-                    <input type="radio">
+                    <input type="radio" name="sabor">
                     Fresa
                   </label>
                 </div>
                 <div class="field">
                   <label class="radio">
-                    <input type="radio">
+                    <input type="radio" name="sabor">
+                    Mora
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="radio">
+                    <input type="radio" name="sabor">
                     Tres leches
                   </label>
                 </div>
@@ -255,13 +285,31 @@
           </div>
 
           <div class="field">
-              <button class="button is-success">
+              <button class="button is-success" style="background-color: #ff3dc8;">
                   Terminar pedido
               </button>
           </div>
         </form>
       </section>
     </main>
+    <footer class="footer" style="background-color:#ffc4f3;">
+      <div class="content has-text-centered box">
+        <p>
+          <strong>Pasteleria web page</strong> by <a href="https://github.com/yuizz">Julian Gonzalez</a>.
+        </p>
+        <p style="font-size:40px;">
+          <a>
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
+        </p>
+      </div>
+    </footer>
   </body>
 
 </html>
