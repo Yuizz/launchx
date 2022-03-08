@@ -1,0 +1,58 @@
+
+
+body{
+  background-color: whitesmoke;
+  height: 200vh;
+}
+
+.navbar{
+  --bs-bg-opacity: .5;
+  height: 15vh;
+  padding: 40px;
+
+}
+
+.navbar-brand{
+  font-size: 38px;
+  font-weight: bold;
+  color: #2949c7 !important;
+}
+
+button.btn-shadow{
+  min-height: 60px;
+  padding: 10px 35px;
+  box-shadow: 0 15px 30px -10px #3858d6;
+  background-color: #3656d4;
+}
+
+.nav-menu{
+  margin:  0 30px;
+}
+
+li.nav-item{
+  padding: 10px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.nav-item a{
+  color: #7f8ca1 !important;
+}
+
+/* Section */
+#info-section{
+  padding:30px;
+}
+
+#info-section div{
+  padding:30px;
+}
+#info-section .col-section{
+  width:70%;
+}
+#info-section .col-section h1{
+  font-size: 100px;
+  color: #1f3e72;
+  font-weight: bold;
+  width: 78%;
+}
