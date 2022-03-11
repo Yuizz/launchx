@@ -47,12 +47,68 @@ li.nav-item{
 #info-section div{
   padding:30px;
 }
-#info-section .col-section{
-  width:70%;
-}
+
 #info-section .col-section h1{
   font-size: 100px;
   color: #1f3e72;
   font-weight: bold;
-  width: 78%;
+  width: 90%;
+}
+
+.badge-background{
+  width: 15px;
+  height: 15px;
+  padding: 15px !important;
+  
+  padding: 0;
+  position: relative;
+  border-radius: 20%;
+}
+
+.badge-background i{
+  height: 1.7em;
+}
+
+.badge-text-box{
+  position: relative;
+  padding: 0 !important;
+}
+
+.badge-text{
+  padding: 0;
+  color: #1f3e72;
+  font-size: 20px;
+  width: 90%;
+  font-weight: bold;
+}
+
+.badge-background .bi{
+  font-size: 20px;
+}
+
+.badge-background.badge-yellow{
+  background: #faf7653d;
+  box-shadow: 0 10px 10px -7px #e9e512d2;
+}
+
+.badge-background.badge-yellow .bi{
+  color: rgb(255, 193, 7);
+}
+
+.badge-background.badge-blue{
+  box-shadow: 0 10px 25px -7px #1d05fd;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(248, 249, 252, 0.3);
+}
+
+.badge-background.badge-blue .bi{
+  color: #4764d4;
+}
+
+.center{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
