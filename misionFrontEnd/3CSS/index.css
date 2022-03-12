@@ -169,16 +169,32 @@ li.nav-item{
   padding: 30px;
 }
 
-#why-section .why-section-container h1{
+#why-section .why-section-container .why-section-header{
   font-size: 50px;
   color: #1f3e72;
   font-weight: bold;
   width: 90%;
 }
-#why-section .why-section-container p{
+#why-section .why-section-container .why-section-info{
   font-size: 30px;
   color: #6d7b93;
   width: 90%;
+}
+
+.card-container{
+  padding: 0 20px;
+}
+
+.card{
+  height: 100%;
+  padding: 30px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.71);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid rgba(255, 255, 255, 0.54);
 }
 
 .card .badge-background{
@@ -186,7 +202,38 @@ li.nav-item{
   height: 70px;
   padding: 15px !important;
   
-  padding: 0;
   position: relative;
   border-radius: 20%;
+  border: 1px solid white;
+  box-shadow:none;
+
+    /* From https://css.glass */
+  background: rgba(122, 160, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid rgba(122, 160, 255, 0.54);
+}
+
+.card .badge-background i{
+  font-size: 30px;
+
+}
+
+.card .card-header{
+  background: white;
+  font-size: 40px;
+  color: #1f3e72;
+  padding-top: 15px;
+  width: 100%;
+  border: none;
+  padding-bottom: 15px;
+}
+
+.card .card-info{
+  background: white;
+  font-weight: normal;
+  color: #6d7b93;
+  font-size: 20px;
 }
