@@ -44,7 +44,7 @@ li.nav-item{
   padding:30px;
 }
 
-#info-section div{
+#info-section .info-section-container{
   padding:30px;
 }
 
@@ -53,6 +53,10 @@ li.nav-item{
   color: #1f3e72;
   font-weight: bold;
   width: 90%;
+}
+
+.badge-container{
+  padding: 30px;
 }
 
 .badge-background{
@@ -87,8 +91,11 @@ li.nav-item{
 }
 
 .badge-background.badge-yellow{
-  background: #faf7653d;
+  background: #faf76521;
   box-shadow: 0 10px 10px -7px #e9e512d2;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(248, 249, 252, 0.3);
 }
 
 .badge-background.badge-yellow .bi{
@@ -96,6 +103,7 @@ li.nav-item{
 }
 
 .badge-background.badge-blue{
+  background: #4935fa1c;
   box-shadow: 0 10px 25px -7px #1d05fd;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -106,9 +114,79 @@ li.nav-item{
   color: #4764d4;
 }
 
+.center-parent{
+  position: relative;
+}
+
 .center{
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+}
+
+.text-info-column{
+  position: relative;
+}
+
+.floating-info{
+  width:75vw;
+  background: white;
+  border-radius: 25px;
+  margin:0 !important;
+  position: absolute;
+  bottom: 10%;
+  padding: 15px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.74);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.floating-info .col-3{
+  padding:10px !important;
+}
+
+.floating-info .badge-container{
+  margin: 0 !important;
+  padding: 5px !important;
+}
+
+.selected-info{
+  /* font-size: 20px; */
+  /* padding-left: 40px; */
+  font-weight: bold;
+}
+
+/* -------------------- */
+#why-section{
+  padding:30px;
+}
+#why-section .why-section-container{
+  padding: 30px;
+}
+
+#why-section .why-section-container h1{
+  font-size: 50px;
+  color: #1f3e72;
+  font-weight: bold;
+  width: 90%;
+}
+#why-section .why-section-container p{
+  font-size: 30px;
+  color: #6d7b93;
+  width: 90%;
+}
+
+.card .badge-background{
+  width: 70px;
+  height: 70px;
+  padding: 15px !important;
+  
+  padding: 0;
+  position: relative;
+  border-radius: 20%;
 }
