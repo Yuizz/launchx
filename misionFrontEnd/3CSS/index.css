@@ -1,7 +1,7 @@
 
 
 body{
-  background-color: whitesmoke;
+  background-color: white;
   min-height: 200vh;
 }
 
@@ -246,4 +246,57 @@ li.nav-item{
   font-weight: normal;
   color: #6d7b93;
   font-size: 20px;
+}
+
+/* Preparations section */
+
+#preparations-section{
+  margin-top: 100px;
+}
+
+#preparations-section .preparations-section-container .preparations-section-header{
+  font-size: 50px;
+  color: #1f3e72;
+  font-weight: bold;
+  width: 100%;
+}
+
+#preparations-section .preparations-section-container .preparations-section-info{
+  font-size: 30px;
+  color: #6d7b93;
+  width: 90%;
+}
+
+.accordion-item {
+  border:none;
+  margin: 15px;
+  box-shadow: 0 2px 12px -7px #818181;
+}
+
+.accordion-item .accordion-button{
+  border-radius: 5px !important;
+  font-size: 30px;
+  color: #6d7b93;
+  border: 1px rgb(207, 206, 206)7b93 solid;
+}
+
+.accordion-item .accordion-button:focus {
+  box-shadow: none;
+  border: 1px rgb(197, 195, 195)7b93 solid;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: white;
+}
+
+.accordion-button:after{
+  width: 1.75rem;
+  height: 1.75rem;
+  background-position:center;
+  background-color: rgba(209, 211, 255, 0.29);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(209, 211, 255, 0.59);
 }
