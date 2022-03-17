@@ -300,3 +300,32 @@ li.nav-item{
   -webkit-backdrop-filter: blur(8.8px);
   border: 1px solid rgba(209, 211, 255, 0.59);
 }
+
+/* Emergency section */
+
+#emergency-section{
+  margin-top: 100px;
+}
+
+#emergency-section .emergency-section-container .column-image img{
+  margin-top: 100px;
+  position: relative;
+  float: right;
+}
+
+#emergency-section .emergency-section-container .column-text{
+  padding-left: 100px;
+}
+
+#emergency-section .emergency-section-container .emergency-section-header{
+  font-size: 50px;
+  color: #1f3e72;
+  font-weight: bold;
+  width: 100%;
+}
+
+#emergency-section .emergency-section-container .emergency-section-info{
+  font-size: 30px;
+  color: #6d7b93;
+  width: 90%;
+}
