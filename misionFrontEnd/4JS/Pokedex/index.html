@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="columns">
+      <div class="wrapper column">
+        <div class="wrapper__content">
+          <div class="sprite__pokemon" :style="{'background': pokemonImg}" style="background-size: 75%"></div>
+          <div class="button__new__pokemon" v-on:click="newRandomPokemon">
+            Click me!
+          </div>
+        </div>
+        <div class="wrapper__background">
+          <img src="pokedex.webp" alt="pokedex">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          pokemonImg: 'url(https://cdn.dribbble.com/users/341887/screenshots/4595077/media/e4c62c617aba05e7a3b48ebf42b8b5c8.gif) center no-repeat'
+        }
+      },
+      methods: {
+        newRandomPokemon: async function() {
+          this.pokemonImg = 'url(https://cdn.dribbble.com/users/341887/screenshots/4595077/media/e4c62c617aba05e7a3b48ebf42b8b5c8.gif) center no-repeat'
+          const resRandom = await fetch('https://www.random.org/integers/?num=1&min=1&max=719&col=1&base=10&format=plain&rnd=new')
+          const resRandomData = await resRandom.json()
+
+          try{
+            const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + resRandomData)
+            const json = await res.json()
+
+            const formRes = await fetch(json.forms[0].url)
+            const formsResData = await formRes.json()
+
+            const spriteUrl = formsResData.sprites.front_default
+            this.pokemonImg = 'url(' + spriteUrl + ') center no-repeat'
+          }catch{
+            alert('algo salio mal')
+          }
+         
+        }
+      },
+      created:function(){
+        this.newRandomPokemon()
+      },
+    }).mount('#app')
+  </script>
+</body>
+</html>

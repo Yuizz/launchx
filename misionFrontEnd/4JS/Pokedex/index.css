@@ -1,0 +1,77 @@
+#wrapper{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.wrapper__content{
+  color: #FFFFFF;
+  font-weight: bold;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 0;
+}
+
+.wrapper__content .sprite__pokemon{
+  position: absolute;
+  top: 390px;
+  left: 259px;
+  height: 210px;
+  width: 345px;
+}
+
+.wrapper__content .button__new__pokemon{
+  width: 70px;
+  height: 70px;
+  background-color: #24ff53f1;
+  position: absolute;
+  top: 145px;
+  left: 433px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  text-align: center;
+  line-height: 70px;
+  font-size: 14px;
+
+  -moz-animation:blink normal 2.5s infinite ease-in-out;
+  /* Firefox */
+  -webkit-animation:blink normal 2.5s infinite ease-in-out;
+  /* Webkit */
+  -ms-animation:blink normal 2.5s infinite ease-in-out;
+  /* IE */
+  animation:blink normal 2.5s infinite ease-in-out;
+  /* Opera */
+}
+
+@keyframes blink {
+  0% {
+         background-color: rgba(0,255,0,1)
+  }
+  50% {
+         background-color: rgba(0,255,0,0.5)
+  }
+  100% {
+         background-color: rgba(0,255,0,1)
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+         background-color: rgba(0,255,0,1)
+  }
+  50% {
+         background-color: rgba(0,255,0,0.5)
+  }
+  100% {
+         background-color: rgba(0,255,0,1)
+  }
+}
+
+.wrapper__background{
+  color: #999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
