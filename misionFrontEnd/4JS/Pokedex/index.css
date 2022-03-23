@@ -17,6 +17,40 @@
   transition: width .5s;
 }
 
+.pokemon__input__container{
+  padding-left: 105px;
+}
+
+.pokemon__input__container label{
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.pokemon__input__container #pokemon-name{
+  padding: 10px;
+  font-size: 16px;
+  margin: 3px;
+  font-style: italic;
+  border: none;
+}
+
+.pokemon__input__container #pokemon-name:focus{
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.pokemon__input__container #pokemon-search-button{
+  background-color: rgb(255, 74, 19);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color:white;
+  font-weight: bold;
+}
+
 #wrapper{
   position: relative;
   width: 200px;

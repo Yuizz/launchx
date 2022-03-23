@@ -23,6 +23,11 @@
           <img src="pokedex.webp" alt="pokedex">
         </div>
       </div>
+      <div class="column pokemon__input__container">
+        <label for="pokemon-name">Write pokemon name: </label>
+        <input type="text" id="pokemon-name" placeholder="Pokemon Name" v-model="inputPokemon">
+        <input type="button" id="pokemon-search-button" value="Search" v-on:click="searchPokemon">
+      </div>
       <div class="column pokemon-info">
         <p>
           Pokemon Name:
@@ -102,6 +107,7 @@
           pokemonSpecialAttack: '0',
           pokemonSpecialDefense: '0',
           pokemonSpeed: '0',
+          inputPokemon: ''
         }
       },
       methods: {
@@ -113,8 +119,6 @@
           try{
             const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + resRandomData)
             const pokemon = await res.json()
-
-            console.log(pokemon)
 
             const formRes = await fetch(pokemon.forms[0].url)
             const formsResData = await formRes.json()
@@ -135,6 +139,40 @@
             alert('algo salio mal')
           }
          
+        },
+        searchPokemon: async function(){
+          if(this.inputPokemon == ''){
+            alert('Escribe un nombre primero.')
+            return
+          }
+          try{
+            this.pokemonImg = 'url(https://cdn.dribbble.com/users/341887/screenshots/4595077/media/e4c62c617aba05e7a3b48ebf42b8b5c8.gif) center no-repeat'
+            const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + this.inputPokemon)
+            const pokemon = await res.json()
+  
+            if(pokemon == undefined){
+              alert('Ese pokemon no existe.')
+              return
+            }
+
+            const formRes = await fetch(pokemon.forms[0].url)
+            const formsResData = await formRes.json()
+
+            this.pokemonName = pokemon.name
+            this.pokemonType1 = pokemon.types[0].type.name
+            this.pokemonType2 = pokemon.types[1] ? " - " + pokemon.types[1].type.name : ''
+            this.pokemonHp = pokemon.stats[0].base_stat
+            this.pokemonAttack = pokemon.stats[1].base_stat
+            this.pokemonDefense = pokemon.stats[2].base_stat
+            this.pokemonSpecialAttack = pokemon.stats[3].base_stat
+            this.pokemonSpecialDefense = pokemon.stats[4].base_stat
+            this.pokemonSpeed = pokemon.stats[5].base_stat
+
+            const spriteUrl = formsResData.sprites.front_default
+            this.pokemonImg = 'url(' + spriteUrl + ') center no-repeat'
+          }catch{
+            alert('algo salio mal')
+          }
         }
       },
       created:function(){
