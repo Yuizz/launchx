@@ -23,6 +23,66 @@
           <img src="pokedex.webp" alt="pokedex">
         </div>
       </div>
+      <div class="column pokemon-info">
+        <p>
+          Pokemon Name:
+          <strong class="pokemon__property">{{ pokemonName }}</strong>
+        </p>
+        <p>
+          Pokemon Type:
+          <strong class="pokemon__property">{{ pokemonType1 }} {{ pokemonType2 }}</strong>
+        </p>
+        <table>
+          <tr>
+            <td>HP</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#fa5858;' :style="{'width': pokemonHp+'px'}">
+                {{ pokemonHp }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Attack</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#faac58;' :style="{'width': pokemonAttack+'px'}">
+                {{ pokemonAttack }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Defense</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#fa5858;' :style="{'width': pokemonDefense+'px'}">
+                {{ pokemonDefense }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Special Attack</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#faac58;' :style="{'width': pokemonSpecialAttack+'px'}">
+                {{ pokemonSpecialAttack }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Special Defense</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#fa5858;' :style="{'width': pokemonSpecialDefense+'px'}">
+                {{ pokemonSpecialDefense }}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>
+              <div class="pokemon__stat__bar" style='background-color:#f4fa58;' :style="{'width': pokemonSpeed+'px'}">
+                {{ pokemonSpeed }}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
       
     </div>
   </div>
@@ -32,7 +92,16 @@
     Vue.createApp({
       data() {
         return {
-          pokemonImg: 'url(https://cdn.dribbble.com/users/341887/screenshots/4595077/media/e4c62c617aba05e7a3b48ebf42b8b5c8.gif) center no-repeat'
+          pokemonImg: 'url(https://cdn.dribbble.com/users/341887/screenshots/4595077/media/e4c62c617aba05e7a3b48ebf42b8b5c8.gif) center no-repeat',
+          pokemonName: 'Eevee',
+          pokemonType1: 'Normal',
+          pokemonType2: ' ',
+          pokemonHp: '0',
+          pokemonAttack: '0',
+          pokemonDefense: '0',
+          pokemonSpecialAttack: '0',
+          pokemonSpecialDefense: '0',
+          pokemonSpeed: '0',
         }
       },
       methods: {
@@ -43,10 +112,22 @@
 
           try{
             const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + resRandomData)
-            const json = await res.json()
+            const pokemon = await res.json()
 
-            const formRes = await fetch(json.forms[0].url)
+            console.log(pokemon)
+
+            const formRes = await fetch(pokemon.forms[0].url)
             const formsResData = await formRes.json()
+
+            this.pokemonName = pokemon.name
+            this.pokemonType1 = pokemon.types[0].type.name
+            this.pokemonType2 = pokemon.types[1] ? " - " + pokemon.types[1].type.name : ''
+            this.pokemonHp = pokemon.stats[0].base_stat
+            this.pokemonAttack = pokemon.stats[1].base_stat
+            this.pokemonDefense = pokemon.stats[2].base_stat
+            this.pokemonSpecialAttack = pokemon.stats[3].base_stat
+            this.pokemonSpecialDefense = pokemon.stats[4].base_stat
+            this.pokemonSpeed = pokemon.stats[5].base_stat
 
             const spriteUrl = formsResData.sprites.front_default
             this.pokemonImg = 'url(' + spriteUrl + ') center no-repeat'

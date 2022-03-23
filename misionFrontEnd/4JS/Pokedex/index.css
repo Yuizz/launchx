@@ -1,3 +1,22 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#app .pokemon-info{
+  padding: 30px;
+}
+
+.pokemon-info .pokemon__property{
+  text-transform: capitalize;
+}
+
+.pokemon-info .pokemon__stat__bar{
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  transition: width .5s;
+}
+
 #wrapper{
   position: relative;
   width: 200px;
@@ -14,8 +33,8 @@
 
 .wrapper__content .sprite__pokemon{
   position: absolute;
-  top: 390px;
-  left: 259px;
+  top: 399px;
+  left: 267px;
   height: 210px;
   width: 345px;
 }
@@ -25,8 +44,8 @@
   height: 70px;
   background-color: #24ff53f1;
   position: absolute;
-  top: 145px;
-  left: 433px;
+  top: 153px;
+  left: 440px;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -70,7 +89,7 @@
 
 .wrapper__background{
   color: #999999;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: -100;
