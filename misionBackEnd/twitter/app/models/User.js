@@ -8,6 +8,10 @@ class User{
     this.lastUpdated = new Date()
   }
 
+  get getName(){
+    return this.name
+  }
+
   get getUsername(){
     return this.username
   }
